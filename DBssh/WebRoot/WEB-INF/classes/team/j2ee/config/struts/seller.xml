@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="seller" namespace="/seller" extends="mydefault">
+		<!-- 登陆 -->
+        <action name="login" class="seller_Login" method="login">  
+        	<result>/seller/seller_main.jsp</result>
+            <result name="fail">/seller/login.jsp</result>  
+            <result name="input">/seller/login.jsp</result>
+        </action>
+        <action name="register" class="seller_Login" method="register">  
+            <result>/seller/registersuccess.jsp</result>  
+            <result name="codeError">/seller/register.jsp</result>
+        </action>
+        <!-- 退出 -->
+        <action name="loginOut" class="seller_Login" method="loginOut">
+        	<result>/seller/login.jsp</result>
+        </action>
+        
+        <action name="*Product" class="seller_Product" method="{1}">
+        	<result name="selectAll">/seller/selectAllProduct.jsp</result>
+        	<!-- 添加 -->
+        	<result name="addsuccess" type="redirectAction">
+        		<param name="actionName">selectAllProduct</param>
+        		<param name="namespace">/seller</param>
+        	</result>
+        	<result name="addfail">/seller/addProduct.jsp</result>
+        	<!-- 修改 -->
+        	<result name="updateSelect">/seller/updateSelect.jsp</result>
+        	<result name="update">/seller/updateAProduct.jsp</result>
+        	<result name="updatesuccess" type="redirectAction">
+        		<param name="actionName">selectAllProduct</param>
+        		<param name="namespace">/seller</param>
+        	</result>
+        	<result name="updatefail">/seller/updateAProduct.jsp</result>
+        	<!-- 删除 -->
+        	<result name="deleteSelect">/seller/deleteSelect.jsp</result>
+        	<result name="afterdelete" type="redirectAction">
+        		<param name="actionName">selectAllProduct</param>
+        		<param name="namespace">/seller</param>
+        	</result>
+        	<!-- 条件查询 -->
+        	<result name="condictionSearch">/seller/selectAllProduct.jsp</result>
+        	<!-- 商品评论 -->
+        	<result name="selectcommentsuccess">/seller/comment.jsp</result>
+        	<!-- 商家投诉 -->
+        	<result name="selectchsuccess">/seller/ch.jsp</result>
+        </action>
+        <action name="*Manager" class="seller_OrderUser" method="{1}">
+        	<result name="selectorder">/seller/orderManager.jsp</result>
+        	<result name="deleteorder" type="redirectAction">
+        		<param name="actionName">selectorderManager</param>
+        		<param name="namespace">/seller</param>
+        	</result>
+        </action>
+    </package>
+</struts>

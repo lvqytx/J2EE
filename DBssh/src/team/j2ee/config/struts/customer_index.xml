@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="index" namespace="/index" extends="mydefault">
+        <action name="customer_*" class="customer_Index" method="{1}">  
+            <result name="indexSelect">/customer/index.jsp</result>  
+            <result name="indexSearch">/customer/searchResult.jsp</result>
+            <result name="productDetail">/customer/productdetail.jsp</result>
+            <result name="addcomment" type="redirectAction">
+            	<param name="actionName">customer_detail</param>
+            	<param name="namespace">/index</param>
+            </result>
+        </action>
+    </package>
+</struts>

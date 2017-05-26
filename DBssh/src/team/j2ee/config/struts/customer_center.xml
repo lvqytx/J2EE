@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="customer" namespace="/customer" extends="mydefault">
+        <action name="customer_register" class="customer_Center" method="register">  
+            <result>/customer/registersuccess.jsp</result>  
+            <result name="codeError">/customer/register.jsp</result>
+        </action>
+        <action name="customer_userLogin" class="customer_Center" method="userLogin">  
+            <result type="redirectAction">
+            	<param name="actionName">customer_index</param>
+            	<param name="namespace">/index</param>
+            </result> 
+            <result name="codeError">/customer/login.jsp</result>
+        </action>
+        <action name="customer_addCh" class="customer_Center" method="addCh">
+        	<result type="redirectAction">
+        		<param name="actionName">customer_userCenter</param>
+        		<param name="namespace">/customer</param>
+        	</result>
+        </action>
+        <action name="customer_selectCh" class="customer_Center" method="selectCh">
+        	<result>/customer/complaint.jsp</result>
+        </action>
+        <action name="customer_userLoginout" class="customer_Center" method="userLoginout">  
+            <result type="redirectAction">
+            	<param name="actionName">customer_index</param>
+            	<param name="namespace">/index</param>
+            </result>
+        </action>
+        <action name="customer_userCenter" class="customer_Center" method="userCenter">  
+            <result>/customer/customerCenter.jsp</result>
+        </action>
+        <action name="customer_orderDetail" class="customer_Center" method="orderDetail"> 
+            <result>/customer/orderdetail.jsp</result>
+        </action>
+    </package>
+    <include file="team/j2ee/config/struts/customer_index.xml"/>
+    
+</struts>

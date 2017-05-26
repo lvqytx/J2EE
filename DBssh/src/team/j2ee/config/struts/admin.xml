@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="admin" namespace="/admin" extends="mydefault">
+		<action name="login" class="admin_Login" method="login" >
+			<result>/admin/admin_main.jsp</result>
+			<result name="fail">/admin/login.jsp</result>
+			<result name="input">/admin/login.jsp</result>
+		</action>
+		<action name="loginOut" class="admin_Login" method="loginOut" >
+			<result>/admin/login.jsp</result>
+		</action>
+		<action name="*Manager" class="admin_User" method="{1}">
+			<result name="selectseller">/admin/sellerManager.jsp</result>
+			<result name="selectcustomer">/admin/customerManager.jsp</result>
+			<result name="deleteseller" type="redirectAction">
+				<param name="actionName">selectsellerManager</param>
+				<param name="namespace">/admin</param>
+			</result>
+			<result name="deletecustomer" type="redirectAction">
+				<param name="actionName">selectcustomerManager</param>
+				<param name="namespace">/admin</param>
+			</result>
+		</action>
+		<action name="*CH" class="admin_Ch" method="{1}">
+			<result name="select">/admin/selectCH.jsp</result>
+			<result name="addhandling">/admin/addhandling.jsp</result>
+			<result name="updatesuccess" type="redirectAction">
+				<param name="actionName">selectCH</param>
+				<param name="namespace">/admin</param>
+			</result>
+			<result name="updatefail">/admin/addhandling.jsp</result>
+		</action>
+	</package>
+</struts>

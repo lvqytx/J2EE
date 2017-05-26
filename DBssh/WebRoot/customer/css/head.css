@@ -1,0 +1,118 @@
+[genuitec-file-id="wc1-8"],[genuitec-lp-path="/DBp/WebRoot/customer/css/head.css"],[genuitec-lp-enabled=false]{
+  /* for codelive */
+}
+
+p{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.all_zong{
+	width: 1000px;
+	margin: auto;
+	margin-top: 50px;
+}
+.all_zong_top{
+	background-color:  #E6E6E6;
+	width:1000px; 
+	float:left; 
+	line-height:35px; 
+	height:35px; 
+	color:#8c8c8c;
+}
+.all_zong_top_right{ 
+	width:78%; 
+	float:right;
+	margin-top: 7px;
+	margin-right: 7px;
+}
+.all_zong_top_right table{ 
+	float:right;
+	
+}
+.all_zong_logo{
+	width:1000px; 
+	float:left; 
+	padding:0px 0 10px;
+}
+.back_search{ 
+	width:574px; 
+	float:right;
+	padding-top:20px;
+}
+.back_search_red{
+	width:574px;
+	float:left; 
+}
+.back_search_red .div2{ 
+	float:left;
+	width:378px;
+}
+.back_search_red .div1{ 
+	float:left;
+	width:96px;
+}
+.back_search_red .div2 .txt{
+	width:323px; 
+	height:30px; 
+	line-height:30px; 
+	border-color: #E6E6FA;
+	background:none;
+}
+.back_search_red .div1 .an{
+	width:79px; 
+	height:30px; 
+	border: none; 
+	font-size:14px; 
+	color:#ffffff; 
+	background-color: #FFA500;
+	font-weight: bold; 
+	cursor: pointer;
+}
+.skin_a .front_daohangbj{
+	width:100%;
+	float:left;
+	height:44px;
+	background-color: #F5D0A9;
+}
+.skin_a .front_daohang {
+	width:1000px; 
+	float:left; 
+	height:44px; 
+	line-height:44px; 
+	font-size:14px; 
+	color:#fff; 
+	font-weight:bold;
+
+}
+
+.skin_a .front_daohang li{
+	list-style-type:none;
+	float:left; 
+	text-align:center; 
+	height:44px; 
+	line-height:40px;
+	padding:0 20px; 
+	position:relative;
+}
+.skin_a .front_daohang li:hover{ 
+	background:#6c0004; 
+	color:#fff; 
+	cursor:pointer;
+}
+.skin_a .front_daohang li.backbj{ 
+	background:#FFA500; 
+	font-size:14px; 
+	font-weight:bold;
+}
+.skin_a .front_daohang li.buy{
+	background:#FFA500;  
+	height:44px; 
+	float:right;
+}
+.skin_a .front_daohang a{
+	color:#fff;
+	text-decoration:none;
+}
+
+.a8c a:link,.a8c a:visited{color:#8c8c8c; text-decoration:none;}
+.a8c a:hover,.a8c a:active{color:#ff9900; text-decoration:none;}

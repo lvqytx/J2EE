@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.custom.i18n.resources" value="messageResourse"/>
+	<constant name="struts.i18n.encoding" value="utf-8"/>
+	<constant name="struts.multipart.saveDir" value="d:/tmmpuploadfiles"/>
+	<constant name="struts.multipart.maxSize" value="20971520"/>
+	<constant name="struts.ui.theme" value="simple"/>
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
+	<package name="mydefault" namespace="/dbprogram" extends="struts-default"> 
+		<global-results>
+			<result name="login">/login.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="userNoLoginError">/login.jsp</result>
+		</global-results>
+    </package>
+    <include file="team/j2ee/config/struts/admin.xml"/>
+    <include file="team/j2ee/config/struts/seller.xml"/>
+    <include file="team/j2ee/config/struts/customer_index.xml"/>
+    <include file="team/j2ee/config/struts/customer_center.xml"/>
+    <include file="team/j2ee/config/struts/customer_cart.xml"/>
+</struts>    

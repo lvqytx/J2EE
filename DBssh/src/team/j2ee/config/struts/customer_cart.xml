@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="cart" namespace="/cart" extends="mydefault">
+        <action name="cart_*" class="customer_Cart" method="{1}">  
+        	<result name="cartdo" type="redirectAction">
+        		<param name="actionName">cart_select</param>
+        		<param name="namespace">/cart</param>
+        	</result>
+        	<result name="login">/customer/login.jsp</result>
+            <result name="cartSelect">/customer/cart.jsp</result>
+            <result name="orderConfirm">/customer/orderconfirm.jsp</result> 
+            <result name="ordersubmit">/customer/orderdone.jsp</result> 
+            <result name="pay">/customer/paydone.jsp</result>
+        </action>
+    </package>
+
+</struts>
